@@ -1,12 +1,17 @@
 import {useGoogleLogin} from "@react-oauth/google"
-
-
+import { googleAuth } from "./Api.jsx"
+import { useNavigate } from "react-router-dom"
 const GoogleLogin = () => {
-
+  const navigate = useNavigate();
   const responseGoogle = (async(authResult)=>{
     try{
       if(authResult['code']){
-        console.log(authResult);
+        const result = await googleAuth(authResult['code']);
+        const {name, email,image} = result.user;
+        const {token} =result;
+        const obj = {name, email,image, token}
+        localStorage.setItem('user-info', JSON.stringify(obj))
+        navigate('/dashboard')
         
       }
     }

@@ -6,7 +6,6 @@ import PageNotFound from './PageNotFound'
 import { GoogleOAuthProvider } from '@react-oauth/google'
 
 function App() {
-  
   const GoogleAuthWrapper= (()=>{
     return(
     <GoogleOAuthProvider clientId={import.meta.env.VITE_CLIENT_ID} >

@@ -1,7 +1,10 @@
 
 const Dashboard = () => {
   return (
-    <div className="text-2xl">Dashboard</div>
+    <div >
+      <h1 className="text-2xl">Dashboard</h1>
+      
+    </div>
   )
 }
 
