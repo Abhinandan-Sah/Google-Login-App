@@ -18,6 +18,7 @@ function App() {
     )
   })
 
+  // eslint-disable-next-line react/prop-types
   const PrivateRoute = ({element})=>{
     return isAuthenticated ? element : <Navigate to="/login" />;
   }
