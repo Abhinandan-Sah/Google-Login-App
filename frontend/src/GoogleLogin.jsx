@@ -12,7 +12,6 @@ const GoogleLogin = () => {
         const obj = {name, email,image, token}
         localStorage.setItem('user-info', JSON.stringify(obj))
         navigate('/dashboard')
-        
       }
     }
     catch(err){
